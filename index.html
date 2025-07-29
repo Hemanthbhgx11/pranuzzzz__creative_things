@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pranuzzzz Creative Things</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f2f5; /* Light gray background */
+            color: #333;
+        }
+        /* Custom class for circular image container (kept in case it's needed for future additions, but not used in this version) */
+        .circular-image-container {
+            width: 120px; /* Adjust size as needed */
+            height: 120px; /* Adjust size as needed */
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid #6366f1; /* Indigo border */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+            transition: transform 0.3s ease-in-out;
+        }
+        .circular-image-container:hover {
+            transform: scale(1.05);
+        }
+        .circular-image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header Section -->
+    <header class="bg-gradient-to-r from-purple-600 to-indigo-600 text-white p-6 shadow-lg rounded-b-xl">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-3xl font-bold tracking-wide">Pranuzzzz Creative Things</h1>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="#services" class="hover:text-purple-200 transition duration-300">Services</a></li>
+                    <li><a href="#portfolio" class="hover:text-purple-200 transition duration-300">Portfolio</a></li>
+                    <li><a href="#contact" class="hover:text-purple-200 transition duration-300">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero/Services Section -->
+    <section id="services" class="relative bg-white py-20 px-4 sm:px-6 lg:px-8 text-center rounded-xl shadow-md mx-4 mt-8">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-extrabold text-gray-900 mb-6">Unleash Your Creativity with Us</h2>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto mb-12">
+                Welcome to Pranuzzzz Creative Things, where imagination takes form! We specialize in unique
+                resin art, captivating drawings, and expressive paintings, bringing your artistic visions to life.
+            </p>
+
+            <!-- Circular Design for Artworks around the name - Now just the central name -->
+            <div class="relative w-full max-w-2xl mx-auto h-48 flex items-center justify-center">
+                <!-- Central Name -->
+                <div class="absolute z-10 bg-indigo-500 text-white text-2xl sm:text-3xl font-semibold p-4 rounded-full shadow-lg">
+                    pranuzzzz__creative_things
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="bg-gray-100 py-20 px-4 sm:px-6 lg:px-8 rounded-xl shadow-md mx-4 mt-8">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-extrabold text-gray-900 mb-12">Our Creative Portfolio</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Resin Art Card -->
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <img src="https://placehold.co/400x300/e0e7ff/333333?text=Resin+Art" alt="Resin Art" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-2">Resin Art Works</h3>
+                    <p class="text-gray-600">Explore our mesmerizing collection of resin art, from coasters to intricate wall decor.</p>
+                </div>
+
+                <!-- Drawings Card -->
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <!-- Updated image source for drawings -->
+                    <img src="http://googleusercontent.com/file_content/3" alt="Mandala Drawing" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-2">Detailed Drawings</h3>
+                    <p class="text-gray-600">Discover the precision and passion in our diverse range of pencil and ink drawings.</p>
+                </div>
+
+                <!-- Paintings Card -->
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <img src="https://placehold.co/400x300/93c5fd/333333?text=Paintings" alt="Paintings" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-2">Vibrant Paintings</h3>
+                    <p class="text-gray-600">Immerse yourself in our world of colors with our unique acrylic and oil paintings.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-gradient-to-r from-indigo-600 to-purple-600 py-20 px-4 sm:px-6 lg:px-8 text-white text-center rounded-xl shadow-md mx-4 my-8">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-extrabold mb-6">Get in Touch!</h2>
+            <p class="text-lg mb-8 max-w-2xl mx-auto">
+                Have a custom request or just want to say hello? We'd love to hear from you.
+                Connect with us on Instagram for the latest updates and creations!
+            </p>
+            <a href="https://www.instagram.com/pranuzzzz___creative_things?utm_source=ig_web_button_share_sheet&igsh=czZkMHJxNDV2d2I5"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="inline-block bg-white text-indigo-700 font-bold py-4 px-8 rounded-full shadow-lg
+                      hover:bg-gray-100 hover:scale-105 transform transition duration-300 ease-in-out text-lg">
+                Contact Us on Instagram
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 text-white p-6 text-center rounded-t-xl">
+        <div class="container mx-auto">
+            <p>&copy; 2025 Pranuzzzz Creative Things. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

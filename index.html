@@ -36,6 +36,59 @@
             height: 100%;
             object-fit: cover;
         }
+
+        /* Keyframes for floating animation */
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-8px); /* Moves up slightly */
+            }
+        }
+
+        /* Keyframes for rotating glow */
+        @keyframes rotateGlow {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Styles for portfolio cards with animations and neon glow */
+        .portfolio-card {
+            position: relative; /* Needed for positioning pseudo-element */
+            overflow: hidden; /* Hides the glow outside the card boundaries */
+            animation: float 3s ease-in-out infinite; /* Apply floating animation */
+            border-radius: 1rem; /* Rounded corners for the card */
+            background-color: #fff; /* White background for the card */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Initial subtle shadow */
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transitions for hover effects */
+            display: block; /* Ensure the anchor tag behaves like a block for full clickability */
+        }
+
+        .portfolio-card:hover {
+            transform: scale(1.02); /* Slightly enlarge on hover */
+            box-shadow: 0 0 20px #a78bfa, 0 0 40px #c4b5fd; /* Stronger neon glow on hover (lavender colors) */
+        }
+
+        .portfolio-card::before {
+            content: '';
+            position: absolute;
+            top: -10%; /* Extends the pseudo-element beyond the card for the glow effect */
+            left: -10%;
+            width: 120%; /* Makes the pseudo-element larger than the card */
+            height: 120%;
+            /* Conic gradient for the rotating color effect (lavender shades) */
+            background: conic-gradient(transparent 0%, #a78bfa 10%, #c4b5fd 30%, #a78bfa 50%, transparent 60%);
+            border-radius: 1.5rem; /* Slightly larger border-radius than the parent card */
+            animation: rotateGlow 4s linear infinite; /* Apply rotation animation */
+            z-index: -1; /* Positions the glow behind the card content */
+            filter: blur(8px); /* Applies a blur to create the neon glow effect */
+            opacity: 0.7; /* Makes the glow slightly translucent */
+        }
     </style>
 </head>
 <body class="antialiased">
@@ -79,28 +132,28 @@
             <h2 class="text-4xl font-extrabold text-gray-900 mb-12">Our Creative Portfolio</h2>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Resin Art Card - Now clickable -->
+                <!-- Resin Art Card - Now clickable and animated -->
                 <a href="https://www.instagram.com/pranuzzzz___creative_things?utm_source=ig_web_button_share_sheet&igsh=czZkMHJxNDV2d2I5"
                    target="_blank" rel="noopener noreferrer"
-                   class="block bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+                   class="portfolio-card">
                     <img src="https://placehold.co/400x300/e0e7ff/333333?text=Resin+Art" alt="Resin Art" class="w-full h-48 object-cover rounded-lg mb-4">
                     <h3 class="text-2xl font-semibold text-gray-800 mb-2">Resin Art Works</h3>
                     <p class="text-gray-600">Explore our mesmerizing collection of resin art, from coasters to intricate wall decor.</p>
                 </a>
 
-                <!-- Drawings Card - Image added for similarity, still clickable -->
+                <!-- Drawings Card - Image added for similarity, still clickable and animated -->
                 <a href="https://www.instagram.com/pranuzzzz___creative_things?utm_source=ig_web_button_share_sheet&igsh=czZkMHJxNDV2d2I5"
                    target="_blank" rel="noopener noreferrer"
-                   class="block bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+                   class="portfolio-card">
                     <img src="https://placehold.co/400x300/bfdbfe/333333?text=Drawings" alt="Drawings" class="w-full h-48 object-cover rounded-lg mb-4">
                     <h3 class="text-2xl font-semibold text-gray-800 mb-2">Detailed Drawings</h3>
                     <p class="text-gray-600">Discover the precision and passion in our diverse range of pencil and ink drawings.</p>
                 </a>
 
-                <!-- Paintings Card - Still clickable -->
+                <!-- Paintings Card - Still clickable and animated -->
                 <a href="https://www.instagram.com/pranuzzzz___creative_things?utm_source=ig_web_button_share_sheet&igsh=czZkMHJxNDV2d2I5"
                    target="_blank" rel="noopener noreferrer"
-                   class="block bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+                   class="portfolio-card">
                     <img src="https://placehold.co/400x300/93c5fd/333333?text=Paintings" alt="Paintings" class="w-full h-48 object-cover rounded-lg mb-4">
                     <h3 class="text-2xl font-semibold text-gray-800 mb-2">Vibrant Paintings</h3>
                     <p class="text-gray-600">Immerse yourself in our world of colors with our unique acrylic and oil paintings.</p>
